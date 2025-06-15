@@ -1,0 +1,105 @@
+    1  clear
+    2  history
+    3  sudo apt update
+    4  sudo apt install openjdk-11-jdk -y
+    5  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+    6  sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+    7  sudo apt update
+    8  sudo apt install jenkins -y
+    9  sudo systemctl start jenkins
+   10  sudo apt update jenkins -y
+   11  sudo apt install jenkins -y
+   12  sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+   13  echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]"   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+   14  sudo apt-get update
+   15  sudo apt-get install jenkins
+   16  sudo apt install docker.io -y
+   17  sudo usermod -aG docker jenkins
+   18  sudo apt install ansible -y
+   19  sudo systemctl restart jenkins
+   20  jenkins --version
+   21  sudo apt update
+   22  sudo apt install fontconfig openjdk-21-jre
+   23  java -version
+   24  openjdk version "21.0.3" 2024-04-16
+   25  OpenJDK Runtime Environment (build 21.0.3+11-Debian-2)
+   26  OpenJDK 64-Bit Server VM (build 21.0.3+11-Debian-2, mixed mode, sharing)
+   27  sudo snap install openjdk
+   28  sudo systemctl restart jenkins
+   29  cat /var/lib/jenkins/secrets/initialAdminPassword
+   30  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   31  ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa
+   32  ssh-copy-id user@13.204.65.9
+   33  sudo ssh-copy-id user@13.204.65.9
+   34  sudo ssh-copy-id ubuntu@13.204.65.9
+   35  ssh-copy-id ubuntu@13.204.65.9
+   36  history
+   37  ls
+   38  cd ~/.ssh
+   39  ls
+   40  ssh-copy-id ubuntu@13.204.65.9
+   41  chmod 400 id_rsa
+   42  ssh-copy-id ubuntu@13.204.65.9
+   43  cd ..
+   44  cd ~/.ssh
+   45  cat id_pub.rsa
+   46  ls
+   47  cat id_rsa
+   48  cd ..
+   49  ssh ubuntu@13.204.65.9
+   50  ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa
+   51  sudo -i
+   52  git clone https://github.com/aashisaxena15/ci-cd-jenkins-ansible-docker.git
+   53  cd ci-cd-jenkins-ansible-docker/
+   54  ls
+   55  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   56  cat Jenkinsfile
+   57  cat /etc/passwd
+   58  su jenkins -
+   59  sudo su jenkins -
+   60  sudo su -
+   61  sudo mkdir -p /var/lib/jenkins/.ssh
+   62  sudo cp /root/.ssh/id_rsa /var/lib/jenkins/.ssh/
+   63  sudo cp /root/.ssh/id_rsa.pub /var/lib/jenkins/.ssh/
+   64  sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh
+   65  sudo chmod 600 /var/lib/jenkins/.ssh/id_rsa
+   66  sudo su - jenkins
+   67  ssh-keyscan -H 13.204.65.9 >> ~/.ssh/known_hosts
+   68  exit
+   69  sudo su - jenkins
+   70  ssh-keyscan -H 13.204.65.9 >> ~/.ssh/known_hosts
+   71  exit
+   72  sudo cat /var/lib/jenkins/.ssh/known_hosts
+   73  sudo su - jenkins
+   74  mkdir -p ~/.ssh
+   75  chmod 700 ~/.ssh
+   76  ssh-keyscan -H 13.204.65.9 >> ~/.ssh/known_hosts
+   77  chmod 644 ~/.ssh/known_hosts
+   78  exit
+   79  sudo cat /var/lib/jenkins/.ssh/known_hosts
+   80  ls
+   81  cd ci-cd-jenkins-ansible-docker/
+   82  ls
+   83  cat Jenkinsfile
+   84  jenkins --versiob
+   85  sudo su - jenkins
+   86  mkdir -p ~/.ssh
+   87  chmod 700 ~/.ssh
+   88  ssh-keyscan -H 13.204.65.9 >> ~/.ssh/known_hosts
+   89  chmod 644 ~/.ssh/known_hosts
+   90  exit
+   91  sudo cat /var/lib/jenkins/.ssh/known_hosts
+   92  sudo mkdir -p /var/lib/jenkins/.ssh
+   93  sudo chmod 700 /var/lib/jenkins/.ssh
+   94  sudo ssh-keyscan -H 13.204.65.9 | sudo tee -a /var/lib/jenkins/.ssh/known_hosts > /dev/null
+   95  sudo chmod 644 /var/lib/jenkins/.ssh/known_hosts
+   96  sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh
+   97  sudo cat /var/lib/jenkins/.ssh/id_rsa
+   98  ls
+   99  cd ci-cd-jenkins-ansible-docker/
+  100  ls
+  101  cd ansible/
+  102  ls
+  103  cat deploy.yaml
+  104  vi deploy.yaml
+  105  history
