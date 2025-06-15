@@ -1,0 +1,13 @@
+- name: Deploy Flask App Container
+  hosts: web
+  become: true
+  tasks:
+    - name: Load Docker image from tar
+      shell: docker load < /tmp/my-flask-app.tar
+
+    - name: Remove old container (if exists)
+      shell: docker rm -f flaskapp || true
+
+    - name: Run the Docker container
+      shell: docker run -d --name flaskapp -p 80:5000 my-flask-app:latest
+
